@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import {Route, Routes} from "react-router-dom"
 import './App.css';
-import { Home } from "./pages/Home";
-import { Discover } from "./pages/Discover";
-import { Profile } from "./pages/Profile";
-import { Navar } from "./components/Navbar"
-import { Group } from "./components/Group"
+import Home from "./pages/Home";
+import Discover from "./pages/Discover";
+import Profile from "./pages/Profile";
+import Navar from "./components/Navbar";
+import Group from "./pages/Group"
 
 function App() {
   return (
