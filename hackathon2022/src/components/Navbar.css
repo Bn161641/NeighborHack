@@ -5,14 +5,57 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 }
 
-.navButtonContainer{
+.navbar img {
+  margin-top: 5px;
+}
+.navButtonContainer {
   display: flex;
   align-items: center;
+  flex: 1;
+  justify-content: center;
 }
 
-.navbar Button{
+.navbar Button {
   margin-right: 20px;
+}
+
+.searchBar {
+  width: 100%;
+  max-width: 300px;
+  display: inline-flex;
+}
+
+.leftSide {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.searchBarInput {
+  flex-grow: 1;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #947048;
+  border-radius: 5px 0 0 5px;
+  background: white;
+}
+
+.searchBarButton {
+  width: 40px;
+  background: #947048;
+  color: white;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.profileSection {
+  flex: 1;
 }
