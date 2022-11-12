@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+hackathon2022/package-lock.json
 
 # testing
 /coverage
