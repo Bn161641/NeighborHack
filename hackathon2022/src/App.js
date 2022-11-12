@@ -5,6 +5,7 @@ import { Home } from "./pages/Home";
 import { Discover } from "./pages/Discover";
 import { Profile } from "./pages/Profile";
 import { Navar } from "./components/Navbar"
+import { Group } from "./components/Group"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/discover" element={<Discover />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/group" element={<Group />} />
       </Routes>
     </div>
   );
