@@ -18,8 +18,9 @@
   justify-content: center;
 }
 
-.navbar Button {
+.navButtonContainer Button {
   margin-right: 20px;
+  margin-top: 5px;
 }
 
 .searchBar {
@@ -58,4 +59,25 @@
 
 .profileSection {
   flex: 1;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+
+.profilePic{
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+}
+
+.profileButton{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  border-radius: 100%;
+}
+
+.profileSection button {
+  margin-right: 10px;
 }

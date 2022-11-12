@@ -10,7 +10,7 @@ hackathon2022/package-lock.json
 /coverage
 
 # production
-/build
+/src/package-lock.json
 
 # misc
 .DS_Store
