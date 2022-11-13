@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link } from "react-router-dom";
+import { Typography } from "@mui/material";
 
 export default function Navbar() {
   return (
@@ -15,28 +16,31 @@ export default function Navbar() {
         <div class="searchBar">
           <input type="text" className="searchBarInput" placeholder="Search" />
           <button type="submit" className="searchBarButton">
-            <SearchIcon />
+            <SearchIcon style={{color:'#4C5464'}}/>
           </button>
         </div>
       </div>
       <div className="navButtonContainer">
         <Link to="/">
           <Button size="large">
-            <HomeIcon />
+            <HomeIcon style={{color:'#FCF4EF'}}/>
           </Button>
         </Link>
         <Link to="/discover">
           <Button size="large">
-            <PinDropIcon />
+            <PinDropIcon style={{color:'#FCF4EF'}}/>
           </Button>
         </Link>
         <Link to="/group">
           <Button size="large">
-            <GroupsIcon />
+            <GroupsIcon style={{color:'#FCF4EF'}}/>
           </Button>
         </Link>
       </div>
       <div className="profileSection">
+        <Typography style={{color:'#FCF4EF', padding:'20px'}}>
+          Welcome, Bryan!
+        </Typography>
         <button className="profileButton">
           <Link to="/profile">
             <img className="profilePic" src={require("./profile.png")} />

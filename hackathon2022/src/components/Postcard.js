@@ -18,6 +18,8 @@ export default function Postcard({ post }){
         <div>
             <Card sx={{ width: 500 }} style={{textAlign:'left',position:'relative'}}>
                 <CardHeader
+                    style={{backgroundColor:'#B99E9B'}}
+                    avatar={<Avatar src={require(`../assets/${post.profile}`)}/>}
                     action={
                         <div>
                             {
@@ -46,8 +48,8 @@ export default function Postcard({ post }){
                             </IconButton>
                         </div>
                     }
-                    title={<Typography style={{fontWeight:'bold'}}>{post.author}</Typography>}
-                    subheader={post.duration}
+                    title={<Typography style={{fontWeight:'bold', color:'#FCF4EF'}}>{post.author}</Typography>}
+                    subheader={<Typography style={{color:'#FCF3EF'}}>{post.duration}</Typography>}
                 />
                 <CardContent>
                     <Typography variant="body2">

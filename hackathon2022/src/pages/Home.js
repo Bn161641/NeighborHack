@@ -1,5 +1,5 @@
 import React from "react"
-import { Card, CardActions, Grid, IconButton, ListItemButton, TextField, Typography } from "@mui/material"
+import { Card, CardActions, CardHeader, Grid, IconButton, ListItemButton, TextField, Typography } from "@mui/material"
 import { data } from "../data"
 import { contacts } from "../contactData"
 import Postcard from "../components/Postcard"
@@ -50,21 +50,23 @@ export default function Home(){
             </Grid>
           ))}
         </Grid>
-        <List sx={{ alignSelf:'flex-start', marginTop:'100px', marginRight:'250px'}}>
-            <Typography variant="h5" sx={{ mt: 4, mb: 2, textAlign:'left', marginLeft:'16px', marginBottom:'0px'}} component="div">
-              Contacts
-            </Typography>
-            {contacts.map(contact => (
-              <ListItem key={contact.id} style={{padding:0}}>
-                <ListItemButton onClick={handleOpen}>
-                  <ListItemAvatar>
-                    <Avatar src={require(`../assets/${contact.profile}`)}/>
-                  </ListItemAvatar>
-                  <ListItemText primary={contact.name} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-        </List>
+          <List sx={{ alignSelf:'flex-start', marginTop:'100px', marginRight:'250px'}}>
+            <Card>
+              <CardHeader 
+              sx={{padding:0}}
+              title={<Typography variant="h5"style={{padding:'10px', backgroundColor:'#FC7061', color:'#FCF4EF', textAlign:'left'}}>Contacts</Typography>}/>
+              {contacts.map(contact => (
+                <ListItem key={contact.id} style={{padding:0}}>
+                  <ListItemButton onClick={handleOpen}>
+                    <ListItemAvatar>
+                      <Avatar src={require(`../assets/${contact.profile}`)}/>
+                    </ListItemAvatar>
+                    <ListItemText primary={contact.name} />
+                  </ListItemButton>
+                </ListItem>
+              ))}
+              </Card>
+          </List>
       </Box>
       {open && 
       <Card style={{position:'fixed', top:'50%', left:'81%', zIndex:'20', padding:'10px'}}>

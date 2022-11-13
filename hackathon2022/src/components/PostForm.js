@@ -34,9 +34,8 @@ export default function PostForm(){
     
     return(
         <div>
-            <Card sx={{ width: 500 }} style={{textAlign:'left', padding:'10px'}}>
+            <Card sx={{ width: 500}} style={{textAlign:'left', padding:'10px'}}>
                 <CardHeader
-            
                         title={<TextField
                             id="filled-multiline-static"
                             label="What's Happening?"
@@ -45,11 +44,12 @@ export default function PostForm(){
                             defaultValue=""
                             variant="filled"
                             fullWidth
+                            sx={{ backgroundColor:'white'}}
                           />}
                     />
                 <CardActions>
                     {choices}
-                    <Button variant="contained" style={{marginLeft:'auto'}}>
+                    <Button variant="contained" style={{marginLeft:'auto', backgroundColor:'#FC7061 '}}>
                         Send
                     </Button>
                 </CardActions>   

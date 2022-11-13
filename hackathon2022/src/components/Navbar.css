@@ -4,7 +4,7 @@
 .navbar {
   width: 100%;
   height: 57px;
-  background-color: white;
+  background-color: #FC7061;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,8 +50,8 @@
 
 .searchBarButton {
   width: 40px;
-  background: #947048;
-  color: white;
+  background: #FCF4EF;
+  color: red;
   outline: none;
   border: none;
   display: flex;
@@ -84,5 +84,5 @@
 }
 
 .profileSection button {
-  margin-right: 10px;
+  margin-right: 20px;
 }
