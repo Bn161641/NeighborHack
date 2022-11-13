@@ -8,7 +8,7 @@ import Box from "@mui/material/Box";
 export default function Home(){
 
   return(
-    <div>
+    <div className="homeContainer">
      <Box
       style={{
         display:'flex',
@@ -21,7 +21,8 @@ export default function Home(){
           display:'flex',
           alignItems: 'center',
           justifyContent:'center',
-          padding:'20px'
+          padding:'20px',
+          marginTop: '25px'
           }}
         >
           {data.map(post => (

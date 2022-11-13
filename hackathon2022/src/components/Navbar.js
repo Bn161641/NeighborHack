@@ -20,21 +20,21 @@ export default function Navbar() {
         </div>
       </div>
       <div className="navButtonContainer">
-        <Button size="large">
-          <Link to="/">
+        <Link to="/">
+          <Button size="large">
             <HomeIcon />
-          </Link>
-        </Button>
-        <Button size="large">
-          <Link to="/discover">
+          </Button>
+        </Link>
+        <Link to="/discover">
+          <Button size="large">
             <PinDropIcon />
-          </Link>
-        </Button>
-        <Button size="large">
-          <Link to="/group">
+          </Button>
+        </Link>
+        <Link to="/group">
+          <Button size="large">
             <GroupsIcon />
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </div>
       <div className="profileSection">
         <button className="profileButton">
