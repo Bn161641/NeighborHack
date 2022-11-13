@@ -38,7 +38,7 @@ export default function Discover(props) {
       <div className="discoverSideBar2">
         <Filter onSetList={setShowListing} onSettingMapToggle={settingMapToggle} nav={nav} onSettingNav={setNav} onSetCity={settingCity} onSetRange={settingRange}/>
       </div>
-      {nav ? <AddForm/> : onMap ? <div id="map"><Map toggle={nav} range={range} eventList={props.eventList}/></div> : <Listing city={city} range={range} nav={nav} showListing={showListing}/>}
+      {nav ? <AddForm showListing={showListing} onSetList={setShowListing}/> : onMap ? <div id="map"><Map toggle={nav} range={range} eventList={props.eventList}/></div> : <Listing city={city} range={range} nav={nav} showListing={showListing}/>}
       {/* <Listing city={city} range={range} nav={nav} eventList={props.eventList} setEventList={props.setEventList}/> */}
       
     </div>

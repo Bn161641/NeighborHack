@@ -1,0 +1,35 @@
+.addForm{
+  padding-top: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.FormCard{
+  background-color: white;
+  height: 600px;
+  width: 700px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.FormCard .addFormInputFieldContainer {
+  margin-bottom: 10px;
+
+}
+
+.addFormInputField{
+  width: 400px;
+}
+
+.FormCard Button{
+  text-transform: none; 
+  font-size: 25px;
+  width: 400px;
+}
