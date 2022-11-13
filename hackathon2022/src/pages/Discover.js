@@ -3,6 +3,7 @@ import Filter from "../components/Filter";
 import Listing from "../components/Listing";
 import { useState } from "react";
 import Map from "../components/Map";
+import "../ununpkg/leafletjs-1.9.2.css";
 
 export default function Discover(props) {
   const [city, setCity] = useState("Richardson, TX")
@@ -32,8 +33,8 @@ export default function Discover(props) {
       <div className="discoverSideBar2">
         <Filter onSettingNav={settingNav} onSetCity={settingCity} onSetRange={settingRange}/>
       </div>
-      <Listing city={city} range={range} nav={nav} eventList={props.eventList} setEventList={props.setEventList}/>
-      {/* <Map /> */}
+      {/* <Listing city={city} range={range} nav={nav} eventList={props.eventList} setEventList={props.setEventList}/> */}
+      <div id="map"><Map range={range} eventList={props.eventList}/></div>
     </div>
   );
 }
