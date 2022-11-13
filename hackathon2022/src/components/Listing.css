@@ -1,0 +1,21 @@
+.discoverListing{
+  flex-grow: 1;
+  margin-top: 57px;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.discoverListing h1{
+  font-size: 24px;
+}
+
+.discoverListingHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

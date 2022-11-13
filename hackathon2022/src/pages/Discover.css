@@ -2,3 +2,8 @@
   display: flex;
   height: 100vh;
 }
+
+.discoverSideBar2{
+  height: 100%;
+  width: 360px;
+}

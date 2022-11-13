@@ -17,7 +17,7 @@ import Slider from "@mui/material/Slider";
 import AddIcon from "@mui/icons-material/Add";
 import Switch from '@mui/material/Switch';
 
-export default function Filter() {
+export default function Filter(props) {
   const [range, setRange] = useState(20);
   const [filterName, setFilterName] = useState("Richardson, TX");
   const [sideNav, setSideNav] = useState({
@@ -30,12 +30,24 @@ export default function Filter() {
 
   const handleSliderChange = (event, newValue) => {
     setRange(newValue);
+    props.onSetRange(newValue);
   };
 
+  function handleChange(element){
+    setFilterName(element.target.value);
+    props.onSetCity(element.target.value);
+  }
   function changeView(view) {
     switch (view) {
       case "showAll":
         setSideNav({
+          showAll: true,
+          events: false,
+          volunteers: false,
+          reports: false,
+          add: false,
+        });
+        props.onSettingNav({
           showAll: true,
           events: false,
           volunteers: false,
@@ -51,9 +63,23 @@ export default function Filter() {
           reports: false,
           add: false,
         });
+        props.onSettingNav({
+          showAll: false,
+          events: true,
+          volunteers: false,
+          reports: false,
+          add: false,
+        });
         break;
       case "volunteers":
         setSideNav({
+          showAll: false,
+          events: false,
+          volunteers: true,
+          reports: false,
+          add: false,
+        });
+        props.onSettingNav({
           showAll: false,
           events: false,
           volunteers: true,
@@ -69,9 +95,23 @@ export default function Filter() {
           reports: true,
           add: false,
         });
+        props.onSettingNav({
+          showAll: false,
+          events: false,
+          volunteers: false,
+          reports: true,
+          add: false,
+        });
         break;
       case "add":
         setSideNav({
+          showAll: false,
+          events: false,
+          volunteers: false,
+          reports: false,
+          add: true,
+        });
+        props.onSettingNav({
           showAll: false,
           events: false,
           volunteers: false,
@@ -156,10 +196,12 @@ export default function Filter() {
       <div className="discoverFilter">
         <h3 className="filterLabel">Filter</h3>
         {/* <Button variant="text">{filterName}</Button> */}
+        <div className="discoverFormContainer">
         <FormControl className="discoverFormController" variant="standard">
           <Input
             className="locationForm"
             value={filterName}
+            onChange={handleChange}
             startAdornment={
               <InputAdornment position="start">
                 <LocationOnIcon />
@@ -167,6 +209,7 @@ export default function Filter() {
             }
           />
         </FormControl>
+        </div>
         <div className="discoverRange">
           <p className="pRange">{range} miles</p>
           <Slider

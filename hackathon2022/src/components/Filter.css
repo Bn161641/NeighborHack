@@ -6,7 +6,7 @@
   height: 100%;
   width: 360px;
   background-color: white;
-  z-index: 1;
+  z-index: 4;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
   position: fixed;
   display: flex;
@@ -138,7 +138,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding-right: 10px;
+  padding-right: 3px;
 }
 
 .discoverHeader{
@@ -161,4 +161,8 @@
 
 .discoverSwitch Switch{
   margin-top: 9px;
+}
+.discoverFormContainer{
+  padding-right: 10px;
+  width: 100%;
 }
