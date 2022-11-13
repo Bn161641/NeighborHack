@@ -10,7 +10,7 @@ export const data = [
         "id": 1
     },
     {
-        "author":"Jin Hendricks",
+        "author":"Matthew Pham",
         "description":"Holding a Garage Sale! First come, first serve for today and tomorrow. Please come out!",
         "location":"101 Main St S",
         "profile":"profile2.jpg",
