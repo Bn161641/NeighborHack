@@ -5,7 +5,7 @@ import { TileLayer } from 'react-leaflet/TileLayer'
 import { Marker } from 'react-leaflet/Marker'
 import { Popup } from 'react-leaflet/Popup'
 
-export default function Map() {
+export default function Map(props) {
     return(
         <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
   <TileLayer
