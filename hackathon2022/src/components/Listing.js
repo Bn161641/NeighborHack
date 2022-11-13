@@ -1,28 +1,68 @@
-import { useState } from "react";
+import { useState, Component } from "react";
 import "./Listing.css";
 import Button from "@mui/material/Button";
+import SortIcon from "@mui/icons-material/Sort";
+import { feedData } from "../pages/feedData";
+export default function Listing(props) {
+  var dataUsing;
 
-export default function Listing(props){
+  
+  // if (props.nav === "showAll") {
+  //   dataUsing = feedData;
+  // } else if (props.nav === "events") {
+  //   dataUsing = feedData.filter((feed) => feed.type == "event");
+  // } else if (props.nav === "volunteers") {
+  //   dataUsing = feedData.filter((feed) => feed.type == "volunteer");
+  // } else if (props.nav === "reports") {
+  //   dataUsing = feedData.filter((feed) => feed.type == "report");
+  // }
 
-  const [showListing, setShowListing] = useState(props.eventList);
-
-  console.log(props);
-  if(props.nav.showListing){
-    setShowListing(props.eventList);
-  } else if (props.nav.events){
-    setShowListing(props.eventList.filter((feed) => feed.type == "event"));
-  } else if (props.nav.volunteers){
-    setShowListing(props.eventList.filter((feed) => feed.type == "volunteer"));
-  } else if (props.nav.reports){
-    setShowListing(props.eventList.filter((feed) => feed.type == "report"));
-  } 
+  // const [showListing, setShowListing] = useState(dataUsing);
+  
 
   return (
-  <div className="discoverListing" >
-    <div className="discoverListingHeader">
-      <h1>{props.city}: {showListing.length} results found</h1>
+    <div className="discoverListing">
+      <div className="discoverListingHeader">
+        <h1>
+          {props.city}: {props.showListing.length} results found
+        </h1>
+        <Button variant="outlined">
+          Sort By Date{" "}
+          <div className="sortIcon">
+            <SortIcon />
+          </div>
+        </Button>
+      </div>
+
+      <div className="ListOfCards">
+        {props.showListing.map(feed => {
+
+          if(feed.type === "event"){
+            return (<div className="CardContainer">
+          <div className="Card">
+            <img src={feed.image} />
+            <div className="CardBody">
+              <p className="date">{feed.date.when}</p>
+              <p className="title">{feed.title}</p>
+              <div className="attendeeAndLocatoin">
+                <p className="attendee">
+                  {feed.attendee} people interested
+                </p>
+                <p className="location">- &nbsp;{feed.address[1]}</p>
+              </div>
+              <Button variant="text">Show on map</Button>
+            </div>
+            <div className="interestedContainer">
+              <Button className="interestedButton" variant="outlined">
+                interested
+              </Button>
+            </div>
+          </div>
+        </div>);
+          }
+          
+        })}
+      </div>
     </div>
-    
-  </div>
   );
-};
+}

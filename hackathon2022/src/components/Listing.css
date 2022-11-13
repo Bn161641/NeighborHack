@@ -18,4 +18,91 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+
+.discoverListingHeader Button {
+  border-radius: 30px;
+  text-transform: none;
+  height: 35px;
+}
+
+.sortIcon{
+  margin-left: 10px;
+  margin-top: 6px;
+}
+
+.ListOfCards{
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.Card{
+  border-radius: 5px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.Card img{
+  width: 200px;
+  height: 200px;
+  background: #76869B;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+}
+
+.CardBody{
+  height: 100%;
+  padding: 0rem 1rem 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.Card p {
+  margin: 0;
+}
+
+.Card .title{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.attendeeAndLocatoin{
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.attendeeAndLocatoin .location{
+  margin-left: 10px;
+}
+
+.Card .date{
+  margin-top: 10px;
+}
+
+.CardBody Button{
+  margin-top: 20px;
+  margin-left: -5px;
+}
+
+.CardContainer{
+  position: relative;
+  width: 100%;
+  height: 100;
+}
+
+.interestedContainer{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }

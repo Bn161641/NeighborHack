@@ -11,14 +11,14 @@ import { useState, useEffect } from "react";
 import { feedData } from "./pages/feedData";
 
 function App() {
-  const [eventList, setEventList] = useState([feedData]);
+  const [eventList, setEventList] = useState(feedData);
 
   return (
     <div className="App">
       <Navar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/discover" element={<Discover eventList={eventList[0]} setEventList={setEventList} />} />
+        <Route path="/discover" element={<Discover eventList={eventList} setEventList={setEventList} />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/group" element={<Group />} />
       </Routes>

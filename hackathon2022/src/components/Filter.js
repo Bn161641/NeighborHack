@@ -16,6 +16,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Slider from "@mui/material/Slider";
 import AddIcon from "@mui/icons-material/Add";
 import Switch from '@mui/material/Switch';
+import { feedData } from "../pages/feedData";
 
 export default function Filter(props) {
   const [range, setRange] = useState(20);
@@ -27,6 +28,7 @@ export default function Filter(props) {
     reports: false,
     add: false,
   });
+
   const [onMapToggle, setOnMapToggle] = useState(false);
 
   function handleSwichChange(event){
@@ -52,13 +54,8 @@ export default function Filter(props) {
           reports: false,
           add: false,
         });
-        props.onSettingNav({
-          showAll: true,
-          events: false,
-          volunteers: false,
-          reports: false,
-          add: false,
-        });
+        props.onSetList(feedData);
+        props.onSettingNav(false);
         break;
       case "events":
         setSideNav({
@@ -68,13 +65,8 @@ export default function Filter(props) {
           reports: false,
           add: false,
         });
-        props.onSettingNav({
-          showAll: false,
-          events: true,
-          volunteers: false,
-          reports: false,
-          add: false,
-        });
+        props.onSetList(feedData.filter((feed) => feed.type === "event"));
+        props.onSettingNav(false);
         break;
       case "volunteers":
         setSideNav({
@@ -84,13 +76,8 @@ export default function Filter(props) {
           reports: false,
           add: false,
         });
-        props.onSettingNav({
-          showAll: false,
-          events: false,
-          volunteers: true,
-          reports: false,
-          add: false,
-        });
+        props.onSetList(feedData.filter((feed) => feed.type === "volunteer"));
+        props.onSettingNav(false);
         break;
       case "reports":
         setSideNav({
@@ -100,13 +87,8 @@ export default function Filter(props) {
           reports: true,
           add: false,
         });
-        props.onSettingNav({
-          showAll: false,
-          events: false,
-          volunteers: false,
-          reports: true,
-          add: false,
-        });
+        props.onSetList(feedData.filter((feed) => feed.type === "report"));
+        props.onSettingNav(false);
         break;
       case "add":
         setSideNav({
@@ -116,13 +98,7 @@ export default function Filter(props) {
           reports: false,
           add: true,
         });
-        props.onSettingNav({
-          showAll: false,
-          events: false,
-          volunteers: false,
-          reports: false,
-          add: true,
-        });
+        props.onSettingNav(true);
         break;
     }
   }
