@@ -31,7 +31,13 @@ export default function AddForm(props) {
       'attendee': 0,
       'image': imageLink
     })
-    console.log(feedData);
+
+    setType("");
+    setDate("");
+    setTitle("");
+    setLocation("");
+    setDescription("");
+    setImageLink("");
   }
 
   const handleTypeChange = (event) => {
