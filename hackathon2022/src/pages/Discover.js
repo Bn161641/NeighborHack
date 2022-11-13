@@ -2,6 +2,7 @@ import "./Discover.css";
 import Filter from "../components/Filter";
 import Listing from "../components/Listing";
 import { useState } from "react";
+import Map from "../components/Map";
 
 export default function Discover(props) {
   const [city, setCity] = useState("Richardson, TX")
@@ -32,6 +33,7 @@ export default function Discover(props) {
         <Filter onSettingNav={settingNav} onSetCity={settingCity} onSetRange={settingRange}/>
       </div>
       <Listing city={city} range={range} nav={nav} eventList={props.eventList} setEventList={props.setEventList}/>
+      {/* <Map /> */}
     </div>
   );
 }
