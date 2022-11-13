@@ -13,8 +13,8 @@ export default function Navbar() {
       <div className="leftSide">
         <img src={require("./cooltext423335907473027.png")} />
         <div class="searchBar">
-          <input type="text" class="searchBarInput" placeholder="Search" />
-          <button type="submit" class="searchBarButton">
+          <input type="text" className="searchBarInput" placeholder="Search" />
+          <button type="submit" className="searchBarButton">
             <SearchIcon />
           </button>
         </div>

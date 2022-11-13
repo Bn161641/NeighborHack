@@ -1,0 +1,104 @@
+
+*{
+  box-sizing: border-box;
+}
+.filter{
+  height: 100%;
+  width: 360px;
+  background-color: white;
+  z-index: 1;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: flex-start;
+  padding-top: 57px;
+}
+
+.filter h1{
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.discoverSearch{
+  display: flex;
+  align-items: center;
+  background-color: #F0F2F5;
+  width: 100%;
+  padding: 5px 0px 5px 0;
+  border-radius: 30px;
+  justify-content: center;
+}
+
+.discoverInput{
+  width: 280px;
+  border: 0;
+  background-color: #F0F2F5;
+}
+
+.discoverInput:focus{
+  outline: none;
+}
+
+.discoverCategory{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.discoverCategory Button{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  height: 44px;
+  color: black;
+  text-transform: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.discoverCategory Button:hover{
+  background-color: #F0F2F5;
+}
+
+.discoverFilter{
+  border-top: 1px solid #CED0D4;
+  border-bottom: 1px solid #CED0D4;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px 0px;
+  margin-top: 10px;
+}
+
+.filterLabel{
+  font-size: 17px;
+  margin: 1px 1px 1px 0px;
+}
+
+.discoverFilter Button{
+  padding: 6px 0;
+  width: 100%;
+  text-transform: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sideNavIcon{
+  margin-right: 10px;
+  background-color: #D8DADF;
+  border-radius: 50px;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
