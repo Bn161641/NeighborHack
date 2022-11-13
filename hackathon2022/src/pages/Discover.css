@@ -7,3 +7,8 @@
   height: 100%;
   width: 360px;
 }
+
+#map{
+  margin-top: 57px;
+  flex-grow: 1;
+}

@@ -27,7 +27,12 @@ export default function Filter(props) {
     reports: false,
     add: false,
   });
+  const [onMapToggle, setOnMapToggle] = useState(false);
 
+  function handleSwichChange(event){
+    setOnMapToggle(event.target.checked);
+    props.onSettingMapToggle(event.target.checked);
+  }
   const handleSliderChange = (event, newValue) => {
     setRange(newValue);
     props.onSetRange(newValue);
@@ -128,7 +133,7 @@ export default function Filter(props) {
         <h1>Discover</h1>
         <div className="discoverSwitch">
           <p>List</p>
-          <Switch />
+          <Switch checked={onMapToggle} onChange={handleSwichChange}/>
           <p>Map</p>
           </div>
       </div>

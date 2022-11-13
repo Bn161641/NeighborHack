@@ -4,6 +4,7 @@ import Listing from "../components/Listing";
 import { useState } from "react";
 import Map from "../components/Map";
 import "../ununpkg/leafletjs-1.9.2.css";
+import AddForm from "../components/AddForm";
 
 export default function Discover(props) {
   const [city, setCity] = useState("Richardson, TX")
@@ -15,6 +16,7 @@ export default function Discover(props) {
     reports: false,
     add: false,
   });
+  const [onMap, setOnMap] = useState(false);
 
   function settingCity(city){
     setCity(city);
@@ -28,13 +30,18 @@ export default function Discover(props) {
     setNav(newNav);
   }
 
+  function settingMapToggle(toggle){
+    setOnMap(toggle);
+  }
+
   return (
     <div className="discover">
       <div className="discoverSideBar2">
-        <Filter onSettingNav={settingNav} onSetCity={settingCity} onSetRange={settingRange}/>
+        <Filter onSettingMapToggle={settingMapToggle} onSettingNav={settingNav} onSetCity={settingCity} onSetRange={settingRange}/>
       </div>
+      {nav.add ? <AddForm/> : onMap ? <div id="map"><Map toggle={nav} range={range} eventList={props.eventList}/></div> : <Listing city={city} range={range} nav={nav} eventList={props.eventList} setEventList={props.setEventList}/>}
       {/* <Listing city={city} range={range} nav={nav} eventList={props.eventList} setEventList={props.setEventList}/> */}
-      <div id="map"><Map range={range} eventList={props.eventList}/></div>
+      
     </div>
   );
 }
