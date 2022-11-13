@@ -52,20 +52,26 @@
   margin-top: 8px;
 }
 
+
 .discoverCategory Button{
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  height: 44px;
+  height: 50px;
   color: black;
   text-transform: none;
   font-weight: bold;
   font-size: 15px;
 }
 
+.discoverCategory Button.active{
+  background-color: #F0F2F5;
+}
+
 .discoverCategory Button:hover{
   background-color: #F0F2F5;
 }
+
 
 .discoverFilter{
   border-top: 1px solid #CED0D4;
@@ -79,6 +85,10 @@
   margin-top: 10px;
 }
 
+.discoverFormController{
+  width: 100%;
+  padding-right: 10px;
+}
 .filterLabel{
   font-size: 17px;
   margin: 1px 1px 1px 0px;
@@ -101,4 +111,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.sideNavIcon.active{
+  background-color: #947048;
+  color: white;
+}
+
+.locationForm{
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.discoverLocation{
+  display: flex;
+  align-items: center;
+}
+
+.pRange{
+  margin: 10px 8px;
+}
+
+.discoverRange{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-right: 10px;
 }
