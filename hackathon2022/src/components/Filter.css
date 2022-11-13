@@ -140,3 +140,25 @@
   width: 100%;
   padding-right: 10px;
 }
+
+.discoverHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+
+.discoverSwitch{
+  display: flex;
+  align-items: center;
+  height: 35px;
+}
+
+.discoverSwitch p{
+  margin-bottom: 10px;
+}
+
+.discoverSwitch Switch{
+  margin-top: 9px;
+}

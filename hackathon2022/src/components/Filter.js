@@ -13,7 +13,9 @@ import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
 import TextField from "@mui/material/TextField";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import Slider from '@mui/material/Slider';
+import Slider from "@mui/material/Slider";
+import AddIcon from "@mui/icons-material/Add";
+import Switch from '@mui/material/Switch';
 
 export default function Filter() {
   const [range, setRange] = useState(20);
@@ -23,6 +25,7 @@ export default function Filter() {
     events: false,
     volunteers: false,
     reports: false,
+    add: false,
   });
 
   const handleSliderChange = (event, newValue) => {
@@ -37,6 +40,7 @@ export default function Filter() {
           events: false,
           volunteers: false,
           reports: false,
+          add: false,
         });
         break;
       case "events":
@@ -45,6 +49,7 @@ export default function Filter() {
           events: true,
           volunteers: false,
           reports: false,
+          add: false,
         });
         break;
       case "volunteers":
@@ -53,6 +58,7 @@ export default function Filter() {
           events: false,
           volunteers: true,
           reports: false,
+          add: false,
         });
         break;
       case "reports":
@@ -61,6 +67,16 @@ export default function Filter() {
           events: false,
           volunteers: false,
           reports: true,
+          add: false,
+        });
+        break;
+      case "add":
+        setSideNav({
+          showAll: false,
+          events: false,
+          volunteers: false,
+          reports: false,
+          add: true,
         });
         break;
     }
@@ -68,7 +84,14 @@ export default function Filter() {
 
   return (
     <div className="filter">
-      <h1>Discover</h1>
+      <div class="discoverHeader">
+        <h1>Discover</h1>
+        <div className="discoverSwitch">
+          <p>List</p>
+          <Switch />
+          <p>Map</p>
+          </div>
+      </div>
       <div className="discoverSearch">
         <SearchIcon />
         <input
@@ -119,25 +142,39 @@ export default function Filter() {
           </div>
           Reports
         </Button>
+        <Button
+          onClick={() => changeView("add")}
+          className={`${sideNav.add ? `active` : ``}`}
+          variant="text"
+        >
+          <div className={`sideNavIcon ${sideNav.add ? `active` : ``}`}>
+            <AddIcon />
+          </div>
+          Add Feed
+        </Button>
       </div>
       <div className="discoverFilter">
         <h3 className="filterLabel">Filter</h3>
         {/* <Button variant="text">{filterName}</Button> */}
-          <FormControl className="discoverFormController" variant="standard">
-            <Input
-              className="locationForm"
-              value={filterName}
-              startAdornment={
-                <InputAdornment position="start">
-                  <LocationOnIcon />
-                </InputAdornment>
-              }
-            />
-          </FormControl>
-          <div className="discoverRange">
-            <p className="pRange">{range} miles</p>
-            <Slider onChange={handleSliderChange} defaultValue={range} aria-label="Default"/>
-          </div>
+        <FormControl className="discoverFormController" variant="standard">
+          <Input
+            className="locationForm"
+            value={filterName}
+            startAdornment={
+              <InputAdornment position="start">
+                <LocationOnIcon />
+              </InputAdornment>
+            }
+          />
+        </FormControl>
+        <div className="discoverRange">
+          <p className="pRange">{range} miles</p>
+          <Slider
+            onChange={handleSliderChange}
+            defaultValue={range}
+            aria-label="Default"
+          />
+        </div>
       </div>
     </div>
   );
