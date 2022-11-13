@@ -18,7 +18,6 @@ export default function Postcard({ post }){
         <div>
             <Card sx={{ width: 500 }} style={{textAlign:'left',position:'relative'}}>
                 <CardHeader
-                    avatar={<Avatar src={require(`../assets/${post.profile}`)}/>}
                     action={
                         <div>
                             {
