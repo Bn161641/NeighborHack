@@ -4,6 +4,11 @@ import { useState } from "react";
 
 export default function AddForm(){
   const [type, setType] = useState("event")
+
+  const handleChange = (event) => {
+    setType(event.target.value);
+  };
+
   return (
   <div>
     <form>
