@@ -10,6 +10,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import CommentIcon from '@mui/icons-material/Comment';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import CardMedia from '@mui/material/CardMedia';
 import Chip from '@mui/material/Chip';
 
 export default function Postcard({ post }){
@@ -51,6 +52,7 @@ export default function Postcard({ post }){
                     title={<Typography style={{fontWeight:'bold', color:'#FCF4EF'}}>{post.author}</Typography>}
                     subheader={<Typography style={{color:'#FCF3EF'}}>{post.duration}</Typography>}
                 />
+                {post.image !== "None" && <CardMedia component="img" image={require(`../assets/${post.image}`)} height="194"/>}
                 <CardContent>
                     <Typography variant="body2">
                         {post.description}

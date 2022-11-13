@@ -7,7 +7,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
-import { groups } from '../groupData'
+import { joined } from '../joinData';
 
 
 export default function GroupFilter() {
@@ -30,13 +30,13 @@ export default function GroupFilter() {
       <Typography variant="h6">
         Groups you've joined
       </Typography>
-      {groups.map(group => (
-              <ListItem key={group.id} style={{padding:0}}>
+      {joined.map(joined => (
+              <ListItem key={joined.id} style={{padding:0}}>
                 <ListItemButton>
                   <ListItemAvatar>
-                    <Avatar src={require(`../assets/${group.image}`)}/>
+                    <Avatar src={require(`../assets/${joined.image}`)}/>
                   </ListItemAvatar>
-                  <ListItemText primary={group.name} secondary={`${group.members} members`}/>
+                  <ListItemText primary={joined.name} secondary={`${joined.members} members`}/>
                 </ListItemButton>
               </ListItem>
             ))}
