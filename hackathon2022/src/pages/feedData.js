@@ -8,7 +8,8 @@ export const feedData = [
     },
     "address": [
       "Richardson Theatre Centre, 518 W Arapaho Rd # 113",
-      "Richardson, TX"
+      "Richardson, TX",
+      [32.962560, -96.735310]
     ],
     "link": "https://allevents.in/org/richardson-theatre-centre/5543340",
     "event_location_map": {
@@ -43,7 +44,8 @@ export const feedData = [
     },
     "address": [
       "2351 Performance Dr",
-      "Richardson, TX"
+      "Richardson, TX",
+      [32.98541, -96.70897]
     ],
     "link": "https://www.eisemanncenter.com/event/i/8484/d/cheek-to-cheek",
     "event_location_map": {
@@ -92,7 +94,8 @@ export const feedData = [
     },
     "address": [
       "700 E Campbell Rd",
-      "Richardson, TX"
+      "Richardson, TX",
+      [32.97475, -96.71534]
     ],
     "link": "https://allevents.in/richardson/its-a-scavenger-hunt-richardson/10000359034400557",
     "event_location_map": {
@@ -126,7 +129,8 @@ export const feedData = [
     },
     "address": [
       "Charles W. Eisemann Center for Performing Arts and Corporate Presentations, 2351 Performance Dr",
-      "Richardson, TX"
+      "Richardson, TX",
+      [32.98573, -96.70885]
     ],
     "link": "https://patch.com/texas/plano/calendar/event/20221113/1968888/plano-community-band-presents-heavy-metal-with-guest-tubist-jason-wallace",
     "event_location_map": {
@@ -181,7 +185,8 @@ export const feedData = [
     },
     "address": [
       "Guitars & Growlers Richardson, 581 W Campbell Rd Suite 101",
-      "Richardson, TX"
+      "Richardson, TX",
+      [32.97719, -96.73953]
     ],
     "link": "https://www.bandsintown.com/e/103763952-derian-ramsey-at-guitars-and-growlers",
     "event_location_map": {
@@ -216,7 +221,8 @@ export const feedData = [
     },
     "address": [
       "Entelechea, 1201 International Pkwy Suite 200",
-      "Richardson, TX"
+      "Richardson, TX",
+      [32.96278, -96.70988]
     ],
     "link": "https://allevents.in/richardson/food-as-ally-weekly-group-support-meeting-in-richardson-tx/10000440705711647",
     "event_location_map": {
@@ -291,7 +297,8 @@ export const feedData = [
     },
     "address": [
       "O'Riley's, 8989 Forest Ln",
-      "Dallas, TX"
+      "Dallas, TX",
+      [32.90993, -96.74979]
     ],
     "link": "https://www.openmicsydney.com/MoreInfo/NjM3NSMjIyNURVhU",
     "event_location_map": {
@@ -346,7 +353,8 @@ export const feedData = [
     },
     "address": [
       "First Baptist Richardson, 1001 N US 75-Central Expy 1000",
-      "Richardson, TX"
+      "Richardson, TX",
+      [33.0346816, -96.7049605]
     ],
     "link": "https://www.songkick.com/concerts/40587772-sandi-patty-at-first-baptist-church",
     "event_location_map": {
@@ -386,7 +394,8 @@ export const feedData = [
     },
     "address": [
       "700 E Campbell Rd",
-      "Richardson, TX"
+      "Richardson, TX",
+      [32.9746349, -96.7152901]
     ],
     "link": "https://allevents.in/richardson/its-a-scavenger-hunt-richardson/10000359034410587",
     "event_location_map": {
